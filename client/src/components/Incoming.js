@@ -43,10 +43,19 @@ const Incoming = ({ contract, account, provider }) =>{
     }
     return (
         <div>
+              <div className="container" style={{margin:"1cm", marginTop: '20px' ,position:'relative',right:"2cm"}}>
+        <div className="row">
+          <div className="col-md-offset-1 col-md-6 col-sm-12">
+            <div className="single-model-search">
             <h1>Your incoming requests:-</h1>
-            <button onClick={showIncoming}>Show on sale cars</button>
+            <button onClick={showIncoming} className="welcome-btn model-search-btn">Show on sale cars</button>
             <ul>{data}</ul>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
     )
 };
 

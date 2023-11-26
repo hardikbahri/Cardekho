@@ -1,8 +1,8 @@
-import './App.css';
+//import './App.css';
 import Upload from "./artifacts/contracts/Upload.sol/Upload.json"
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import { Route, Link, Routes} from 'react-router-dom';
+import { Route, Link, Routes } from 'react-router-dom';
 import FileUp from './components/FileUp';
 import Pay from "./components/Pay"
 import Home from "./components/Home"
@@ -16,6 +16,7 @@ import Newcar from './components/Newcar';
 import Featured from './components/Featured';
 import Footer from './components/Footer';
 import Certify from './components/Certify';
+import Box from "./components/Box";
 function App() {
 
   const [account, setAccount] = useState("");
@@ -59,27 +60,50 @@ function App() {
 
 
   return (
-    <Template>
-      <Navbar></Navbar>
-      <Service></Service>
-      <Newcar></Newcar>
-      <Featured></Featured>
-      <Footer></Footer>
+
+
     <div className="App">
-      <h3>Your account address: {account}</h3>
-      <Routes>
-        <Route exact path="/" element = {<Pay/>}/>
-        <Route exact path="/home" element = {<Home account={account} provider={provider} contract={contract} />}/>
-        <Route exact path="/incoming" element = {<Incoming account={account} provider={provider} contract={contract}/>}/>
-        <Route exact path="/userdocs" element = {<FileUp account={account} provider={provider} contract={contract} />}/>
-        <Route exact path="/add" element = {<AddVehicle account={account} provider={provider} contract={contract}/>}/>
-        <Route exact path="/track" element = {<Track account={account} provider={provider} contract={contract}/>}/>
-        <Route exact path="/certify" element = {<Certify account={account} provider={provider} contract={contract}/>} />
-      </Routes>
+      <Template>
+        <Navbar></Navbar>
+
+        
+        <Routes>
+        <Route exact path="/" element={
+            <div>
+              <Service></Service>
+              <h3>Your account address: {account}</h3>
+              <Newcar></Newcar>
+              <Featured></Featured>
+            </div>
+          } />
+          <Route exact path="/home" element={
+            <div>
+              <Service></Service>
+              <h3>Your account address: {account}</h3>
+              <Newcar></Newcar>
+              <Featured></Featured>
+            </div>
+          } />
+          <Route exact path="/featured-cars" element={
+            <div>
+              <Featured />
+              <Home account={account} provider={provider} contract={contract} />
+            </div>
+          } />
+          <Route exact path="/incoming" element={<Incoming account={account} provider={provider} contract={contract} />} />
+         
+          <Route exact path="/userdocs" element={<FileUp account={account} provider={provider} contract={contract} />} />
+          <Route exact path="/add" element={<AddVehicle account={account} provider={provider} contract={contract} />} />
+          <Route exact path="/track" element={<Track account={account} provider={provider} contract={contract} />} />
+          <Route exact path="/certify" element={<Certify account={account} provider={provider} contract={contract} />} />
+        </Routes>
+        <Footer></Footer>
+
+      </Template>
     </div>
-    
-    
-    </Template>
+
+
+
   );
 }
 

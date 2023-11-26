@@ -31,10 +31,18 @@ const Certify = ({ contract, account, provider }) => {
     
     return (
         <div>
+            <div className="container" style={{margin:"1cm", marginTop: '20px' ,position:'relative',right:"2cm"}}>
+        <div className="row">
+          <div className="col-md-offset-1 col-md-6 col-sm-12">
+            <div className="single-model-search">
             <h1>You can download certificate here</h1>
-            <button onClick={getData}>Get data</button>
+            <button onClick={getData} className="welcome-btn model-search-btn">Get data</button>
             <div>
                 {visEle}
+            </div>
+            </div>
+            </div>
+            </div>
             </div>
         </div>
     );

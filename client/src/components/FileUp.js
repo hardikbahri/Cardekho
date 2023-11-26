@@ -54,15 +54,23 @@ const FileUp = ({ contract, account, provider }) => {
 
     return (
         <div>
+          <div className="container" style={{margin:"1cm", marginTop: '20px' ,position:'relative',right:"2cm"}}>
+        <div className="row">
+          <div className="col-md-offset-1 col-md-6 col-sm-12">
+            <div className="single-model-search">
             <h2>Upload here</h2>
 
             <form onSubmit={handleSubmit}>
                 <input type='file' onChange={retrieveFile}/>
                 <br/>
-                <button type="submit" className="upload" disabled={!file}>
+                <button type="submit" className="upload welcome-btn model-search-btn" disabled={!file}>
                     Upload File
                 </button>
             </form>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
     );
 };
