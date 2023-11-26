@@ -16,23 +16,29 @@ const Track = ({ contract, account, provider }) => {
     }
     return (
         <div>
-             <div className="container" style={{margin:"1cm", marginTop: '20px' ,position:'relative',right:"2cm"}}>
-        <div className="row">
-          <div className="col-md-offset-1 col-md-6 col-sm-12">
-            <div className="single-model-search">
-            <h1>Track Ownership of Vehicle</h1>
-            <form onSubmit={handleSubmit}>
-                <label>Enter car ID</label>
-                <input type="text" id="regNo"/>
-                <input type="submit" className="welcome-btn model-search-btn" />
-            </form>
-            <p>{data}</p>
+          <div className="container" style={{ margin: "1cm", marginTop: '20px', position: 'relative', right: "2cm" }}>
+            <div className="row">
+              <div className="col-md-offset-1 col-md-6 col-sm-12">
+                <div className="single-model-search">
+                  <h1>Track Ownership of Vehicle</h1>
+                  <form onSubmit={handleSubmit}>
+                    <label>Enter car ID</label>
+                    <input type="text" id="regNo" />
+                    <input type="submit" className="welcome-btn model-search-btn" />
+                  </form>
+                  {data && data.map && (
+                    data.map((item, index) => (
+                      <p key={index}>{item}</p>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    )
+      );
+      
+      
 };
 
 

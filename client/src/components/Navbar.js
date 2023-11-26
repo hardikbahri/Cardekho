@@ -61,7 +61,7 @@ function Navbar() {
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
 					</p>
-					<button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
+					
 				</div>
 			</div>
 

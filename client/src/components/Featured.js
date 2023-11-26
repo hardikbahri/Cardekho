@@ -4,7 +4,7 @@ function Featured() {
    
 	return (
 		<>
-		
+{/* 		
 		<section id="featured-cars" class="featured-cars">
 			<div class="container">
 				<div class="section-header">
@@ -49,7 +49,7 @@ function Featured() {
 				</div>
 			</div>
 
-		</section>
+		</section> */}
 		</>
     )
 };

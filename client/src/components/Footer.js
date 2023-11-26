@@ -15,8 +15,7 @@ function Footer() {
 									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
 								</p>
 								<div class="footer-contact">
-									<p>info@themesine.com</p>
-									<p>+1 (885) 2563154554</p>
+									
 								</div>
 							</div>
 						</div>
@@ -81,9 +80,7 @@ function Footer() {
 				<div class="footer-copyright">
 					<div class="row">
 						<div class="col-sm-6">
-							<p>
-								&copy; copyright.designed and developed by <a href="https://www.themesine.com/">themesine</a>.
-							</p>
+							
 						<div class="col-sm-6">
 							<div class="footer-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>	

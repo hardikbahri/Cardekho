@@ -78,8 +78,8 @@ function App() {
           } />
           <Route exact path="/home" element={
             <div>
+              <h3 style={{marginTop:'1cm'}}>Your account address: {account}</h3>
               <Service></Service>
-              <h3>Your account address: {account}</h3>
               <Newcar></Newcar>
               <Featured></Featured>
             </div>
