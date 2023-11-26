@@ -61,8 +61,8 @@ function Box({ items, onButtonClick }) {
                 <h2>
                   <a href="#">{item.brand} <span>{item.model}</span></a>
                 </h2>
-                <h3>{item.price}</h3>
-                <p>{item.description}</p>
+                <h3>{item.price}Hiiii</h3>
+                <p>{item.description} Hellooooo</p>
               </div>
             </div>
           </div>
