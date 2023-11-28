@@ -43,10 +43,10 @@ const Home = ({ contract, account, provider }) => {
                     </div>
                     <div className="featured-model-info">
                       <p>
-                        {str_array[0]}{' '}
+                        Vehicle ID: {str_array[0]}{' '},
 
 
-                        {str_array[2]} ETH
+                        Vehicle Price: {str_array[2]} ETH <br></br> {str_array[4]} Wheel Drive
                       </p>
                     </div>
                   </div>
@@ -55,7 +55,7 @@ const Home = ({ contract, account, provider }) => {
                       <a href="#">{item.brand} <span>{item.model}</span></a>
                     </h2>
                     <h3>Car name: {str_array[1]} </h3>
-                    <p> Item description goes here Hellooooo</p>
+                    <p> </p>
                   </div>
                 </div>
                 <input type="hidden" className="cost" value={str_array[2]} />

@@ -6,6 +6,16 @@ const AddVehicle = ({ contract, account, provider }) => {
       let v3 = document.querySelector("#three").value;
       let v4 = document.querySelector("#four").value;
       let v5 = document.querySelector("#five").value;
+
+
+      const parsedValue = parseInt(v1, 10);
+      const parsedValue2 = parseInt(v3, 10);
+      const parsedValue3 = parseInt(v5, 10);
+      if (isNaN(parsedValue) || parsedValue < 0 || v2==='' || isNaN(parsedValue2) || parsedValue2<=0 || isNaN(parsedValue3) || parsedValue3<0 || v4==='') {
+        alert("Invalid details entered");
+        window.location.reload();
+      }
+
       console.log(v1, v2, v3, v4, v5);
       await contract.addVehicle(v1, v2, v3, v4, v5);
     };

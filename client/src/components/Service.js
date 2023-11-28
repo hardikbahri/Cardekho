@@ -14,7 +14,7 @@ function Service() {
 								</div>
 								<h2><a href="#">largest dealership <span> of</span> car</a></h2>
 								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+									
 								</p>
 							</div>
 						</div>
@@ -25,7 +25,7 @@ function Service() {
 								</div>
 								<h2><a href="#">unlimited repair warrenty</a></h2>
 								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+									
 								</p>
 							</div>
 						</div>
@@ -36,7 +36,7 @@ function Service() {
 								</div>
 								<h2><a href="#">insurence support</a></h2>
 								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
+									
 								</p>
 							</div>
 						</div>
