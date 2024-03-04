@@ -17,6 +17,7 @@ import Featured from './components/Featured';
 import Footer from './components/Footer';
 import Certify from './components/Certify';
 import Box from "./components/Box";
+import Social from "./components/Social"
 function App() {
 
   const [account, setAccount] = useState("");
@@ -96,6 +97,7 @@ function App() {
           <Route exact path="/add" element={<AddVehicle account={account} provider={provider} contract={contract} />} />
           <Route exact path="/track" element={<Track account={account} provider={provider} contract={contract} />} />
           <Route exact path="/certify" element={<Certify account={account} provider={provider} contract={contract} />} />
+          <Route exact path="/social" element={<Social account={account} provider={provider} contract={contract}/>} />
         </Routes>
         <Footer></Footer>
 

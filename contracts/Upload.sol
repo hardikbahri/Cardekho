@@ -29,6 +29,14 @@ contract Upload {
         address buyer;
         address seller;
     }
+    struct Post{
+        string pic;
+        string author;
+        string title;
+        string text;
+        address writer;
+    }
+    Post[] public posts;
     Vehicle[] public onSale;
     mapping(address=>Pair[]) incomingReqs;
     mapping(uint=>address[]) history;
@@ -39,6 +47,12 @@ contract Upload {
   mapping(address=>Cert[]) forCert;
   mapping(address=>mapping(address=>bool)) previousData;
 
+  function addPosts(string memory url, string memory author, string memory title, string memory text) public {
+        posts.push(Post(url, author, title, text, msg.sender));
+  }
+  function viewPosts() public view returns(Post[] memory){
+        return posts;
+  }
   function addVehicle(uint _id, string memory _name, uint _price, string memory _pic, uint _wdrive) public{
         
         onSale.push(Vehicle(_id, _name, _price, _pic, _wdrive, true, msg.sender));
